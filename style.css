@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+
+:root {
+    --primary: #FE654F;
+    --secondary: #FCFFFC;
+    --third: #E6E8E6;
+    --black: #040F0F;
+    font-family: Kdam Thmor Pro, sans-serif;
+}
+
+.page-container {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.start {
+    all: unset;
+    height: 10vh;
+    width: 15vw;
+    color: var(--primary);
+    letter-spacing: 1px;
+    border: 2px solid var(--primary);
+    text-align: center;
+    border-radius: 1rem; 
+    transition: 100ms;
+}
+
+.start:hover {
+    letter-spacing: 5px;
+    box-shadow: 1px 1px 10px 2px var(--primary);
+    transition: 150ms;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
+    box-shadow: 1px 1px 10px 1px var(--black);
+}
+
+.grid-container > div {
+    display: flex;
+    width: min(200px, 50vw);
+    height: min(200px, 50vw);
+    justify-content: center;
+    align-items: center;
+    font-size: 500%;
+    border: 2px solid var(--black);
+    color: var(--primary);
+    transition: 250ms;
+    z-index: 1;
+}
+
+.grid-container > div:hover {
+    background-color: var(--third);
+    transition: 150ms;
+}
