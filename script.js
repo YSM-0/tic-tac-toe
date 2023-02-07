@@ -1,10 +1,17 @@
-const playGrid = [
-    ["X","O","O"],
-    ["O","X","O"],
-    ["O","X","X"]
+let playGrid = [
+    ["","",""],
+    ["","",""],
+    ["","",""]
 ]
 
+const startButton = document.querySelector('.start')
+
+const player = 'X'
+
+const bot = 'O'
+
 const createGrid = function (playGrid) {
+
     const gridContainer = document.createElement('div')
     const pageContainer = document.querySelector('.page-container')
 
@@ -14,13 +21,27 @@ const createGrid = function (playGrid) {
 
     for (let row of playGrid) {
         for (let i = 0; i < row.length; i++) {
-            const mark = document.createElement('div')
+            const markCase = document.createElement('div')
             
-            mark.classList.add('mark')
-            gridContainer.appendChild(mark)
-            mark.textContent = row[i]
+            markCase.classList.add('mark')
+            gridContainer.appendChild(markCase)
+            markCase.textContent = row[i]
         }
     }
 }
 
-createGrid(playGrid)
+const startGame = function () {
+    startButton.remove()
+
+    playGrid = [
+        ["","",""],
+        ["","",""],
+        ["","",""]
+    ]
+
+    createGrid(playGrid)
+}
+
+startButton.addEventListener('click', () => {
+    startGame()
+})
