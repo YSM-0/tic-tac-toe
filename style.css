@@ -19,13 +19,14 @@
 
 .start {
     all: unset;
-    height: 10vh;
-    width: 15vw;
+    height: 100px;
+    width: 300px;
     color: var(--primary);
     letter-spacing: 1px;
     border: 2px solid var(--primary);
     text-align: center;
-    border-radius: 1rem; 
+    border-radius: 1rem;
+    font-size: 1.5rem; 
     transition: 100ms;
 }
 
@@ -53,10 +54,78 @@
     color: var(--primary);
     transition: 800ms;
     z-index: 1;
+    cursor: pointer;
 }
 
 .grid-container > div:hover {
     background-color: var(--third);
     font-size: 650%;
     transition: 150ms;
+}
+
+.name-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.input {
+    all: unset;
+    height: 50px;
+    width: 300px;
+    color: var(--primary);
+    letter-spacing: 1px;
+    border: 2px solid var(--primary);
+    text-align: center;
+    border-radius: 1rem; 
+    font-size: 1.5rem;
+    transition: 100ms;
+}
+
+.input:focus {
+    box-shadow: 1px 1px 10px 2px var(--primary);
+    transition: 150ms;
+}
+
+.input:hover {
+    box-shadow: 1px 1px 10px 2px var(--primary);
+    transition: 150ms;
+}
+
+.label {
+    margin-bottom: 10px;
+}
+
+.button {
+    all: unset;
+    font-size: 1.5rem;
+    height: 100px;
+    width: 300px;
+    color: var(--primary);
+    letter-spacing: 1px;
+    border: 2px solid var(--primary);
+    text-align: center;
+    border-radius: 1rem; 
+    transition: 100ms;
+    margin-top: 50px;
+}
+
+.button:hover {
+    letter-spacing: 5px;
+    box-shadow: 1px 1px 10px 2px var(--primary);
+    transition: 150ms;
+}
+
+.shadow {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-size: 500%;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: var(--secondary);
+    z-index: 10;
+    gap: 20px;
 }
